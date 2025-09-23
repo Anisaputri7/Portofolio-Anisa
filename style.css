@@ -1,0 +1,341 @@
+/* --- Import Font dari Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- Variabel Warna & Properti Desain --- */
+:root {
+    --primary-pink: #E6A4B4;
+    --secondary-pink: #F8C8DC;
+    --dark-text: #3a3a3a;
+    --light-text: #6b6b6b;
+    --bg-color: #fff9fa;
+    --white: #ffffff;
+    --border-color: #fde2ec;
+    --shadow: 0 4px 15px rgba(224, 182, 198, 0.1);
+    --glow-shadow: 0 8px 30px rgba(230, 164, 180, 0.4);
+}
+
+/* --- Reset & Gaya Dasar --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+    line-height: 1.7;
+    position: relative;
+    overflow-x: hidden;
+    cursor: none; /* Sembunyikan kursor default */
+}
+
+/* --- KURSOR KUSTOM BARU (LIQUID & AESTHETIC) --- */
+/* ========== KURSOR PROFESIONAL BARU ========== */
+/* Sembunyikan kursor default browser */
+body {
+    cursor: none;
+}
+
+/* Titik kecil di tengah */
+.cursor-dot {
+    position: fixed;
+    top: -5px; /* Offset agar posisi tengahnya pas */
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-pink); /* Ambil dari variabel warna pink kamu */
+    border-radius: 50%;
+    pointer-events: none; /* Agar tidak mengganggu klik */
+    z-index: 9999;
+    transition: transform 0.2s ease-out;
+}
+
+/* Lingkaran luar yang mengikuti */
+.cursor-outline {
+    position: fixed;
+    top: -20px; /* Offset agar posisi tengahnya pas */
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary-pink); /* Ambil dari variabel warna pink kamu */
+    border-radius: 50%;
+    pointer-events: none; /* Agar tidak mengganggu klik */
+    z-index: 9999;
+    transition: transform 0.2s ease-out, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efek saat hover di elemen interaktif */
+.cursor-outline.hovered {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: -30px;
+    border-color: var(--secondary-pink);
+    background-color: rgba(230, 164, 180, 0.2); /* Sedikit warna saat hover */
+}
+
+/* --- LATAR BELAKANG ANIMASI (DREAMY) --- */
+.background-blobs .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(150px);
+    z-index: -1;
+    opacity: 0.4;
+}
+.blob1 {
+    width: 600px;
+    height: 600px;
+    background: var(--secondary-pink);
+    top: -10%;
+    left: -20%;
+    animation: moveBlob1 25s infinite alternate ease-in-out;
+}
+.blob2 {
+    width: 700px;
+    height: 700px;
+    background: #a2d2ff; /* Sentuhan warna biru agar tidak monoton */
+    bottom: -15%;
+    right: -25%;
+    animation: moveBlob2 30s infinite alternate ease-in-out;
+}
+@keyframes moveBlob1 { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(100px, 150px) rotate(60deg); } }
+@keyframes moveBlob2 { from { transform: translate(0, 0) rotate(0deg); } to { transform: translate(-150px, -100px) rotate(-45deg); } }
+
+/* --- Tipografi --- */
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+h1 { font-size: 3.2rem; color: var(--dark-text); line-height: 1.2; }
+h2 { font-size: 2.5rem; color: var(--dark-text); margin-bottom: 25px; text-align: center; position: relative; padding-bottom: 10px; }
+h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background-color: var(--primary-pink); border-radius: 2px; }
+h3 { font-size: 1.4rem; color: var(--dark-text); }
+p { color: var(--light-text); }
+a { text-decoration: none; color: var(--primary-pink); transition: all 0.3s ease; }
+a:hover { opacity: 0.8; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+/* --- Komponen Global: Navigasi, Tombol, Footer --- */
+.navbar { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); padding: 15px 0; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1100px; margin: 0 auto; }
+.nav-brand { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--dark-text); }
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { font-weight: 600; font-size: 1rem; color: var(--light-text); padding-bottom: 5px; border-bottom: 2px solid transparent; }
+.nav-links a.active, .nav-links a:hover { color: var(--primary-pink); border-bottom-color: var(--primary-pink); }
+.hamburger-menu { display: none; cursor: pointer; }
+.hamburger-menu .bar { display: block; width: 25px; height: 3px; margin: 5px auto; transition: all 0.3s ease-in-out; background-color: var(--dark-text); }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; background-color: var(--primary-pink); color: var(--white) !important; padding: 12px 28px; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; border: 2px solid var(--primary-pink); box-shadow: var(--shadow); }
+.btn:hover { background-color: #d68fa5; border-color: #d68fa5; transform: translateY(-3px); box-shadow: var(--glow-shadow); }
+.btn-outline { background-color: transparent; color: var(--primary-pink) !important; }
+.btn-outline:hover { background-color: var(--primary-pink); color: var(--white) !important; }
+
+.footer { background-color: var(--dark-text); color: #f4f4f4; text-align: center; padding: 40px 20px; margin-top: 80px; }
+.footer .social-links a { color: #f4f4f4; font-size: 1.5rem; margin: 0 10px; }
+.footer .social-links a:hover { color: var(--primary-pink); transform: scale(1.1); }
+.footer p { margin-top: 20px; color: #aaa; }
+
+/* --- Gaya Halaman Spesifik --- */
+.page-header { text-align: center; padding: 80px 20px; }
+.page-header p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: var(--light-text); }
+
+/* Hero Section (index.html) */
+.hero { padding: 80px 0; }
+.hero-container { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.hero-text { flex: 1.2; max-width: 600px; }
+.hero-text .subtitle { font-size: 1.2rem; color: var(--primary-pink); font-weight: 600; }
+.hero-text h1 { margin: 10px 0; }
+.hero-text p { margin-bottom: 30px; font-size: 1.1rem; }
+.hero-image { flex: 0.8; max-width: 320px; text-align: center; }
+.hero-image img { width: 100%; height: 320px; object-fit: cover; border-radius: 50%; border: 8px solid var(--white); box-shadow: 0 10px 40px rgba(224, 182, 198, 0.4); transition: transform 0.3s ease; }
+.hero-image img:hover { transform: scale(1.05) rotate(3deg); }
+.hero-actions { display: flex; gap: 15px; flex-wrap: wrap; }
+
+/* Sections (About, Interests, CTA) */
+section { padding: 80px 20px; }
+#about-content { text-align: center; max-width: 800px; margin: 0 auto; }
+.interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.interest-card { background-color: var(--white); padding: 30px; border-radius: 15px; text-align: center; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.interest-card:hover { transform: translateY(-10px); box-shadow: var(--glow-shadow); }
+.interest-card i { font-size: 3.5rem; color: var(--primary-pink); margin-bottom: 15px; }
+#contact-cta { text-align: center; }
+#contact-cta p { margin: 15px 0 30px 0; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+/* Project Page (proyek.html) */
+/* --- Proyek (BAGIAN YANG DIPERBAIKI) --- */
+#projects { padding-top: 60px; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-card { 
+    background: var(--white); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+    display: flex; 
+    flex-direction: column; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    position: relative; /* Tambahkan ini jika belum ada */
+}
+.project-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: var(--glow-shadow); 
+}
+.project-card img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 3px solid var(--primary-pink); 
+}
+.project-card-content { 
+    padding: 20px; 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+}
+.project-card-content h3 { 
+    margin-bottom: 10px; 
+    color: var(--dark-text); 
+}
+.project-card-content p { 
+    margin-bottom: 15px; 
+    flex-grow: 1; 
+    font-size: 0.95rem; 
+}
+.project-tags { 
+    margin-bottom: 20px; 
+}
+.project-tags .tag { 
+    display: inline-block; 
+    background-color: #fce4ec; 
+    color: #c2185b; 
+    padding: 5px 12px; 
+    border-radius: 15px; 
+    font-size: 0.8rem; 
+    font-weight: 600; 
+    margin-right: 5px; 
+    margin-bottom: 5px; 
+}
+
+/* ⬇️⬇️ GANTI BAGIAN DI BAWAH INI ⬇️⬇️ */
+
+.project-links {
+    /* INI KUNCINYA: DIBUAT SELALU TERLIHAT */
+    opacity: 1;
+    
+    /* Kita kasih efek naik dikit biar tetap keren */
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    
+    margin-top: auto; /* Ini untuk mendorongnya ke bawah */
+    padding-top: 15px; /* Kasih jarak sedikit dari paragraf */
+}
+
+.project-links a {
+    margin-right: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* EFEK HOVER-NYA KITA UBAH JADI LEBIH HALUS */
+.project-card:hover .project-links {
+    transform: translateY(0); /* Pas di-hover, dia naik ke posisi normal */
+    opacity: 1; /* Pastikan tetap terlihat */
+}
+
+/* Contact Page (kontak.html) */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.contact-card { background-color: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 35px 30px; text-align: center; text-decoration: none; color: var(--dark-text); box-shadow: var(--shadow); position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.contact-card:hover { transform: translateY(-8px); box-shadow: var(--glow-shadow); }
+.shine-effect { position: absolute; top: 0; left: -150%; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%); transform: skewX(-25deg); transition: left 0.6s ease; }
+.contact-card:hover .shine-effect { left: 150%; }
+.card-icon-wrapper { width: 70px; height: 70px; margin: 0 auto 25px auto; border-radius: 50%; background-color: #fff0f5; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--primary-pink); transition: transform 0.3s ease; }
+.contact-card:hover .card-icon-wrapper { animation: icon-jiggle 0.5s; }
+.card-cta { font-weight: 500; color: var(--primary-pink); }
+.card-cta i { margin-left: 5px; transition: transform 0.3s ease; }
+.contact-card:hover .card-cta i { transform: translateX(5px); }
+@keyframes icon-jiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+
+/* --- Animasi & Responsif --- */
+.fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; } h2 { font-size: 2rem; }
+    .hamburger-menu { display: block; z-index: 1001; }
+    .hamburger-menu.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger-menu.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger-menu.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .nav-links { position: fixed; left: -100%; top: 0; gap: 0; flex-direction: column; background-color: rgba(255, 249, 250, 0.95); backdrop-filter: blur(10px); width: 100%; height: 100vh; text-align: center; transition: 0.3s; padding-top: 100px; }
+    .nav-links.active { left: 0; }
+    .nav-links li { padding: 20px 0; }
+    .nav-links a { font-size: 1.5rem; }
+    .hero-container { flex-direction: column-reverse; text-align: center; }
+    .hero-text { max-width: 100%; }
+    .hero-actions { justify-content: center; }
+    .cursor-container { display: none; } /* Sembunyikan kursor kustom di mobile */
+    body { cursor: auto; }
+} /* Detail Proyek (proyek1.html) */
+.project-detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+.project-detail-img {
+  flex: 1 1 500px;
+  border-radius: 12px;
+  box-shadow: var(--glow-shadow);
+  transition: transform 0.3s ease;
+}
+.project-detail-img:hover {
+  transform: scale(1.03);
+}
+.project-detail-text {
+  flex: 1 1 400px;
+}
+.project-detail-text h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--primary-pink);
+}
+.project-detail-text ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: var(--light-text);
+}
+
+/* ========== KURSOR CACING (LIQUID TRAIL) ========== */
+body {
+    cursor: none;
+}
+
+.cursor-container {
+    /* Menerapkan filter gooey dari SVG yang ada di HTML kamu */
+    filter: url(#gooey-filter);
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998; /* Sedikit di bawah kursor utama */
+}
+
+.cursor-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px; /* Ukuran default dot */
+    height: 25px;
+    background-color: var(--primary-pink); /* Warna dot */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+}
+
+/* Jejak dot yang mengikuti akan sedikit lebih kecil */
+.follower {
+    background-color: var(--secondary-pink);
+    width: 20px;
+    height: 20px;
+}
+
+/* Saat hover, semua dot membesar untuk efek 'melt' */
+.cursor-container.hovered .cursor-dot {
+    transform: scale(1.5);
+}

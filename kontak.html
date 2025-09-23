@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Saya - Portofolio Anisa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Menghilangkan jarak di atas kartu kontak */
+        #contact-page {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <svg style="position:absolute; width:0; height:0;">
+        <filter id="gooey-filter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+        </filter>
+    </svg>
+
+    <div class="cursor-container"></div>
+    
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand"> Portofolio Anisa </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="proyek.html">Proyek Saya</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Saya selalu terbuka untuk diskusi, kolaborasi, dan peluang baru. Silakan hubungi saya melalui platform pilihan Anda di bawah ini.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-page" class="fade-in-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <a href="mailto:anisaauliaputri2005@gmail.com" class="contact-card">
+                        <div class="shine-effect"></div>
+                        <div class="card-icon-wrapper"><i class="fas fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <p>anisaauliaputri2005@gmail.com</p>
+                        <span class="card-cta">Kirim Pesan <i class="fas fa-arrow-right"></i></span>
+                    </a>
+    
+                    <a href="https://www.linkedin.com/in/anisa-p-231b5b288/" target="_blank" class="contact-card">
+                        <div class="shine-effect"></div>
+                        <div class="card-icon-wrapper"><i class="fab fa-linkedin-in"></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>Anisa Aulia Putri</p>
+                        <span class="card-cta">Lihat Profil <i class="fas fa-arrow-right"></i></span>
+                    </a>
+    
+                    <a href="https://wa.me/6288290925956" target="_blank" class="contact-card">
+                        <div class="shine-effect"></div>
+                        <div class="card-icon-wrapper"><i class="fab fa-whatsapp"></i></div>
+                        <h3>WhatsApp</h3>
+                        <p>+62 882-9092-5956</p>
+                        <span class="card-cta">Mulai Chat <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anisa-p-231b5b288/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 - Didesain & Dikembangkan dengan ❤ oleh Anisa Aulia Putri</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

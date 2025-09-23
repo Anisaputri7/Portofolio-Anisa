@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Proyek Pawsure - Portofolio Anisa</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Hero Section */
+    .hero-proyek {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #fde2e4, #fad2e1, #e2ece9);
+      border-radius: 0 0 40px 40px;
+      overflow: hidden;
+    }
+    .hero-proyek img {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      animation: float 6s ease-in-out infinite;
+    }
+    .hero-proyek h1 {
+      font-size: 2.2rem;
+      color: #e85d75;
+      margin-bottom: 10px;
+    }
+    .hero-proyek p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* Section Content */
+    .section-proyek {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 40px;
+    }
+    .card-proyek {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    .card-proyek:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+    .card-proyek h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #e85d75;
+    }
+    .card-proyek p,
+    .card-proyek ul {
+      color: #555;
+      line-height: 1.6;
+    }
+    .card-proyek ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+    .card-proyek ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 28px;
+    }
+    .card-proyek ul li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Highlight Quote */
+    .highlight-quote {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: white;
+      border-radius: 20px;
+      padding: 40px;
+      font-size: 1.2rem;
+      text-align: center;
+      font-style: italic;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Buttons */
+    .project-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .project-links .btn {
+      padding: 12px 22px;
+      border-radius: 14px;
+      font-weight: 600;
+    }
+    .btn-main {
+      background: #e85d75;
+      color: white;
+      border: none;
+    }
+    .btn-main:hover {
+      background: #d94b66;
+    }
+    .btn-outline {
+      border: 2px solid #e85d75;
+      color: #e85d75;
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: #e85d75;
+      color: white;
+    }
+    .btn-pdf {
+      border: 2px solid #d32f2f;
+      color: #d32f2f;
+      background: transparent;
+    }
+    .btn-pdf:hover {
+      background: #d32f2f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <svg style="position:absolute; width:0; height:0;">
+    <filter id="gooey-filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" 
+        values="1 0 0 0 0  
+                0 1 0 0 0  
+                0 0 1 0 0  
+                0 0 0 18 -7" 
+        result="goo"></feColorMatrix>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+    </filter>
+  </svg>
+
+  <div class="cursor-container"></div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">Portofolio Anisa</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="proyek.html" class="active">Proyek Saya</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-proyek">
+    <img src="assets/Desain tanpa judul-10.png" alt="Mockup Proyek Pawsure">
+    <h1>Proyek 1 - PAWSURE</h1>
+    <p>Pawsure 🐱 Aplikasi kesehatan hewan terintegrasi yang saya bangun bersama tim guna menghadirkan solusi cepat dan sederhana bagi pemilik hewan peliharaan💛.</p>
+  </header>
+
+  <main>
+    <section class="section-proyek">
+      <div class="card-proyek">
+        <h2>Tentang Proyek</h2>
+        <ul>
+          <li>🐱 <b>Pawsure</b> adalah aplikasi mobile layanan kesehatan hewan peliharaan yang dikembangkan untuk menjawab masalah rendahnya akses dokter hewan di Indonesia.</li>
+          <li>💊 Menyediakan fitur <b>konsultasi online</b>, <b>e-pharmacy</b>, <b>booking janji temu</b> (termasuk pet visit), serta pencatatan riwayat kesehatan hewan dalam satu platform.</li>
+          <li>💛 Keunggulan utama: kemudahan akses & transparansi ulasan dokter, sehingga pemilik hewan dapat layanan medis lebih cepat, praktis, dan terpercaya.</li>
+          <li>✨ Saya berperan dalam analisis kebutuhan, desain sistem, serta dokumentasi aplikasi menggunakan pendekatan <b>user-centered design</b>.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://www.figma.com/design/eiIhw0g4qKG9lOgUJHO046/PawSure?node-id=0-1&t=irEx7ts6YBwOKqgP-1" target="_blank" class="btn btn-main">
+            <i class="fas fa-eye"></i> Lihat Figma
+          </a>
+          <a href="[LINK_GOOGLE_DRIVE_KAMU_DI_SINI]" target="_blank" class="btn btn-pdf">
+            <i class="fas fa-file-pdf"></i> Lihat Studi Kasus (PDF)
+          </a>
+          <a href="proyek.html" class="btn btn-outline">
+            <i class="fas fa-arrow-left"></i> Kembali ke Proyek
+          </a>
+        </div>
+      </div>
+
+      <div class="highlight-quote">
+        "Desain yang baik bukan hanya terlihat indah, tapi juga membuat hidup lebih mudah ✨"
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/anisa-p-231b5b288/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; 2025 - Didesain & Dikembangkan dengan ❤ oleh Anisa Aulia Putri</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
