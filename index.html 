@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anisa Aulia Putri - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <svg style="position:absolute; width:0; height:0;">
+        <filter id="gooey-filter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+        </filter>
+    </svg>
+
+    <div class="cursor-container"></div>
+
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand"> Portofolio Anisa </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="proyek.html">Proyek Saya</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <span class="subtitle">Halo! Saya.....</span>
+                <h1>Anisa Aulia Putri</h1>
+                <p>
+                    Mahasiswa semester 5 Information System di Binus University dengan minat mendalam untuk menciptakan solusi digital yang bermanfaat, indah, dan menarik melalui desain antarmuka dan riset pengguna.
+                </p>
+                <div class="hero-actions">
+                    <a href="CV-AnisaAuliaPutri.pdf" download class="btn">
+                        <i class="fas fa-download"></i> Unduh CV
+                    </a>
+                    <a href="proyek.html" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i> Lihat Proyek
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Assets/assetsProfile.png" alt="Foto Profil Anisa">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="fade-in-section">
+            <div class="container">
+                <h2>Tentang Saya</h2>
+                <div class="about-content">
+                    <p>
+                        Saya adalah seorang mahasiswi yang penuh rasa ingin tahu tentang Dunia teknologi, khususnya bagaimana sebuah produk digital dirancang dan dikembangkan, Hal itu selalu berhasil menarik perhatian saya. Saya percaya perpaduan antara desain yang empatik dan kode yang efisien adalah kunci untuk pengalaman pengguna yang luar biasa.
+                    </p>
+                    <p>
+                        Saya mencari kesempatan magang di mana saya bisa mengasah kemampuan, berkontribusi dalam proyek nyata, dan belajar dari para profesional di industri.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="fade-in-section">
+            <div class="container">
+                <h2>Minat & Fokus Saya</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <i class="fas fa-pen-ruler"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Merancang antarmuka yang tidak hanya indah secara visual, tetapi juga intuitif dan mudah digunakan oleh semua orang.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                        <h3>UX Research</h3>
+                        <p>Menggali kebutuhan dan masalah pengguna melalui riset adalah fondasi untuk menciptakan solusi yang relevan dan dicintai.</p>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Menikmati proses mengubah desain menjadi sebuah website yang fungsional dan interaktif menggunakan HTML, CSS, dan JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-cta" class="fade-in-section">
+            <div class="container">
+                <h2>Tertarik untuk Berkolaborasi?</h2>
+                <p>Saya sangat senang bisa berdiskusi lebih lanjut. Mari terhubung!</p>
+                <a href="kontak.html" class="btn"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anisa-p-231b5b288/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 - Didesain & Dikembangkan dengan ❤ oleh Anisa Aulia Putri</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
