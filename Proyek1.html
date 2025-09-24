@@ -108,6 +108,10 @@
       padding: 12px 22px;
       border-radius: 14px;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .btn-main {
       background: #e85d75;
@@ -126,15 +130,6 @@
       background: #e85d75;
       color: white;
     }
-    .btn-pdf {
-      border: 2px solid #d32f2f;
-      color: #d32f2f;
-      background: transparent;
-    }
-    .btn-pdf:hover {
-      background: #d32f2f;
-      color: white;
-    }
   </style>
 </head>
 <body>
@@ -150,7 +145,6 @@
       <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
     </filter>
   </svg>
-
   <div class="cursor-container"></div>
 
   <nav class="navbar">
@@ -216,5 +210,6 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
